@@ -19,7 +19,7 @@ mongoose.connect(process.env.DATABASE_CONNECTION,{
         console.log("DB CONNECTED") 
     }).catch((error)=>console.log(error.message))
 
-    app.use("/api",bookRoutes);
+    app.use("/",bookRoutes);
 
 app.get('/',(req,res)=>{
     res.send("WELCOME TO HACKSCRIPT BACKEND SERVICE,updated(21/12/22)")

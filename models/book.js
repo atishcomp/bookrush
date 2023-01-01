@@ -29,15 +29,15 @@ rating:{
 },
 date:{
     type:String,
-    required:true
+    // required:true
 },
 price:{
     type:String,
-    required:true
+    // required:true
 },
 image:{
     type:String,
-    required:true
+    // required:true
 },
 image_hd:{
     type:String,

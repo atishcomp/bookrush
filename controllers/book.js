@@ -8,7 +8,7 @@ exports.createBook= (req,res)=>{
     console.log(req.body)
 
    const book= new Book(req.body); 
-   console.log(req.body)
+
    book.save((err,values)=>{
        if(err || !values){
            return res.status(400).json({
