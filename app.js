@@ -10,6 +10,7 @@ var bodyParser= require("body-parser");
 app.use(cors())
 app.use(bodyParser.json())
 
+const bookRoutes = require("./routes/book") 
 
 mongoose.connect(process.env.DATABASE_CONNECTION,{ 
     useNewUrlParser:true,
@@ -18,7 +19,7 @@ mongoose.connect(process.env.DATABASE_CONNECTION,{
         console.log("DB CONNECTED") 
     }).catch((error)=>console.log(error.message))
 
-    
+    app.use("/api",bookRoutes);
 
 app.get('/',(req,res)=>{
     res.send("WELCOME TO HACKSCRIPT BACKEND SERVICE,updated(21/12/22)")
