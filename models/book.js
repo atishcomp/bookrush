@@ -5,11 +5,16 @@ var mongoose = require("mongoose");
 var bookSchema=new mongoose.Schema({
 
 book_name:{
+    unique:true,
     type:String,  
     trimm:true,
-    required:true
+    required:true,
+    
 },
-
+book_id:{
+    type:String,
+    unique:true,
+},
 author_name:{
     type:String,
     trimm:true,
@@ -32,7 +37,7 @@ date:{
     // required:true
 },
 price:{
-    type:String,
+    type:Number,
     // required:true
 },
 image:{
@@ -42,7 +47,20 @@ image:{
 image_hd:{
     type:String,
     
+},
+home:{
+    type:String,
+},
+home_category:{
+    type:String
+},
+stock:{
+    type:Number
+},
+category:{
+    type:Array
 }
+
 
 
 },{timestamps:true})
