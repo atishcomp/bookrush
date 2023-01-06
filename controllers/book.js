@@ -12,6 +12,7 @@ exports.createBook= (req,res)=>{
 
    book.save((err,values)=>{
        if(err || !values){
+        console.log("error in saving book data...")
            return res.status(400).json({
                error:"UNABLE TO CREATE BOOK IN DB"
            });

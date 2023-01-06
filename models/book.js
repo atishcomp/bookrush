@@ -5,7 +5,7 @@ var mongoose = require("mongoose");
 var bookSchema=new mongoose.Schema({
 
 book_name:{
-    unique:true,
+   
     type:String,  
     trimm:true,
     required:true,
@@ -13,7 +13,7 @@ book_name:{
 },
 book_id:{
     type:String,
-    unique:true,
+    
 },
 author_name:{
     type:String,
