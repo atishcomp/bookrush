@@ -48,9 +48,6 @@ image_hd:{
     type:String,
     
 },
-home:{
-    type:String,
-},
 home_category:{
     type:String
 },
