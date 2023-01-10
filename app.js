@@ -11,6 +11,8 @@ app.use(cors())
 app.use(bodyParser.json())
 
 const bookRoutes = require("./routes/book") 
+const fictionRoutes = require("./routes/fiction") 
+const non_fictionRoutes = require("./routes/non_fiction") 
 
 mongoose.connect(process.env.DATABASE_CONNECTION,{ 
     useNewUrlParser:true,
@@ -20,6 +22,8 @@ mongoose.connect(process.env.DATABASE_CONNECTION,{
     }).catch((error)=>console.log(error.message))
 
     app.use("/",bookRoutes);
+    app.use("/",fictionRoutes);
+    app.use("/",non_fictionRoutes);
 
 app.get('/',(req,res)=>{
     res.send("WELCOME TO HACKSCRIPT BACKEND SERVICE,updated(21/12/22)")

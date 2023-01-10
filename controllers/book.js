@@ -95,12 +95,26 @@ exports.updateBook=(req,res,next)=>{
 
 }
 
-//THIS WILL RETURN THE LIST OF ALL USERS
+//THIS WILL RETURN THE LIST OF ALL BOOKS
 exports.getAllBooks = (req,res)=>{
     Book.find().exec((err,users)=>{   
         if(err || !users){
              return res.status(400).json({
                  error:"SOME ERROR OCCURRED IN GETTING DATA"
+             })
+        }
+        res.json(users);
+
+   })
+}
+
+//GET PARTICULAR BOOK DATA
+exports.getBook = (req,res)=>{
+    console.log(req.query.book_name)
+    Book.findOne({book_name:req.query.book_name}).exec((err,users)=>{   
+        if(err || !users){
+             return res.status(400).json({
+                 error:"SOME ERROR OCCURRED IN GETTING BOOK DATA"
              })
         }
         res.json(users);
