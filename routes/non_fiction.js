@@ -4,7 +4,7 @@ const {getAllNonfictionBooks} = require("../controllers/non_fiction.js")
 
 
 
-router.get("/non_fiction/nonfictionbooks",getAllNonfictionBooks)
+router.get("/nonfiction/nonfictionbooks",getAllNonfictionBooks)
 
 
 module.exports= router;
