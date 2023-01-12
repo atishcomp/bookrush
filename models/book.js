@@ -48,9 +48,7 @@ image_hd:{
     type:String,
     
 },
-home_category:{
-    type:String
-},
+
 stock:{
     type:Number
 },
