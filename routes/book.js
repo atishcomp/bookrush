@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const {createBook,getAllBooks,updateBook,deleteBook,getBook} = require("../controllers/book.js")
 
-
+//all routes
 router.post("/book/create",createBook)
 router.get("/book/allbooks",getAllBooks)
 router.get("/book/getbook",getBook)
