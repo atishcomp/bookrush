@@ -62,7 +62,7 @@ return res.status(400).json({
    });
 }
 
-//BOOK DATA UPDATION BY ADMIN ONLY
+//BOOK DATA UPDATION BY ADMIN ONLY!
 exports.updateBook=(req,res,next)=>{  
    Book.findOneAndUpdate({"_id" :"63b1b37f26629d91e8e9476d"},
 { $set: { "book_name": req.body.book_name,"author_name":req.body.author_name,"description":req.body.description,"page":req.body.page,"rating":req.body.rating,"date":req.body.date,"price":req.body.price,"image":req.body.image,"image_hd":req.body.image,"home":req.body.home,"home_category":req.body.home_category, }}, 
