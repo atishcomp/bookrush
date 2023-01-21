@@ -26,7 +26,7 @@ mongoose.connect(process.env.DATABASE_CONNECTION,{
     app.use("/",non_fictionRoutes);
 
 app.get('/',(req,res)=>{
-    res.send("WELCOME TO HACKSCRIPT BACKEND SERVICE,updated(21/12/22)")
+    res.send("WELCOME TO HACKSCRIPT BACKEND SERVICE")
   })
   
 
